@@ -11,21 +11,23 @@ def eris():
 		quotes = f.readlines()
 		f.close()
 
-		last = len(quotes) - 1
-		rnd = random.randint(0, last)
-		rndd = random.randint(0, last)
-		if rndd != rnd: 
-			print(quotes[rnd])
-			print(quotes[rndd], end='')
-		else: 
-			print(quotes[rnd])
-			print(quotes[last - rndd], end='')
+		count = 0
+		while (count < 1):
+			last = len(quotes) - 1
+			rnd = random.randint(0, last)
+			rndd = random.randint(0, last)
+			if rndd != rnd: 
+				print(quotes[rnd], end='')
+				print(quotes[rndd], end='')
+				count = 1
+			else: 
+				count = 0
 
 	elif numin == 2:
 		count = 0
 		while (count < 1):
 			quotein = input("Please enter a quote to add: ")
-			f = open("quotes.txt", "a")
+			f = open("quotes.txt", "a", newline='\n')
 			f.write(quotein)
 			f.close()
 			usrin1 = input("If you want to add more quotes press 1, to stop press 2: ")

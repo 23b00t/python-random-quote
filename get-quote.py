@@ -17,7 +17,7 @@ def eris():
 			rnd = random.randint(0, last)
 			rndd = random.randint(0, last)
 			if rndd != rnd: 
-				print(quotes[rnd], end='')
+				print(quotes[rnd])
 				print(quotes[rndd], end='')
 				count = 1
 			else: 
